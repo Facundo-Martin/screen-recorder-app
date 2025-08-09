@@ -20,15 +20,18 @@ export const Navbar = () => {
         {/* user avatar */}
         {user && (
           <figure>
-            <button aria-label="user config">
-              <Image
-                src="/assets/images/dummy.jpg"
-                alt="User"
-                width={36}
-                height={36}
-                className="rounded-full aspect-square"
-              />
-            </button>
+            {/* TODO: Add this dynamic id */}
+            <Link href="/profile/id">
+              <button aria-label="user config">
+                <Image
+                  src="/assets/images/dummy.jpg"
+                  alt="User"
+                  width={36}
+                  height={36}
+                  className="rounded-full aspect-square"
+                />
+              </button>
+            </Link>
 
             <button aria-label="Log out" className="cursor-pointer">
               <Image
