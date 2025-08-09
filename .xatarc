@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Facundo-Martin-s-workspace-i6vs26.us-east-1.xata.sh/db/nextjs-video-app",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
