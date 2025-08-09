@@ -2,8 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { authClient } from "@/lib/auth-client";
 
 export default function SignIn() {
+  const handleSignIn = async () => {
+    return await authClient.signIn.social({ provider: "google" });
+  };
   return (
     <main className="sign-in">
       <aside className="testimonial">
@@ -69,7 +73,7 @@ export default function SignIn() {
           </p>
 
           {/* TODO: Integrate authentication */}
-          <button onClick={() => null}>
+          <button onClick={handleSignIn}>
             <Image
               src="/assets/icons/google.svg"
               alt="Google Icon"
